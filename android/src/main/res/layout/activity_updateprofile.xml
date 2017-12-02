@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.root.jobsquare.updateprofile"
+    android:orientation="vertical">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/UpdateInfo"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="#CC0000"
+            android:layout_marginLeft="60dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Update Info" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="5dp">
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/age"
+            android:hint="username" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/location"
+            android:layout_marginLeft="30dp"
+            android:hint="Age"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="Location"
+            android:layout_marginLeft="30dp"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+    <Spinner
+        android:id="@+id/jobtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mlogin"
+            android:layout_centerHorizontal="true"
+            android:hint="Contact Number"
+            android:layout_marginLeft="30dp"
+            android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dwage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+        <EditText
+            android:id="@+id/wage"
+            android:layout_width="292dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/lname"
+            android:layout_alignLeft="@+id/gender"
+            android:layout_alignStart="@+id/gender"
+            android:layout_marginLeft="30dp"
+            android:ems="10"
+            android:hint="Expected wage" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:onClick="onclick"
+            android:layout_marginLeft="30dp"
+            android:background="#110774"
+            android:alpha="0.8"
+            android:textColor="#fff"
+            android:text="Update Info" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ddelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:onClick="onclick"
+            android:layout_marginLeft="30dp"
+            android:background="#110774"
+            android:alpha="0.8"
+            android:textColor="#fff"
+            android:text="Delete Account" />
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>
