@@ -3,6 +3,7 @@ from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Product, Review
 from .serializers import ProductSerializer, ReviewSerializer
+from django.contrib.auth.models import User
 
 
 
@@ -47,8 +48,8 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     #permission_classes = (IsAdminOrReadOnly, )
-    lookup_field = 'email'
-    lookup_url_kwarg = 'email'
+    lookup_field = 'pk'
+    lookup_url_kwarg = 'pk'
 
 
 
@@ -57,6 +58,8 @@ class ReviewList(generics.ListCreateAPIView):
     #permission_classes = (IsAuthenticatedOrReadOnly, )
     lookup_field = 'email'
     lookup_url_kwarg = 'email'
+    print(lookup_field)
+
 
     # def perform_create(self, serializer):
     #     serializer.save(
@@ -66,7 +69,8 @@ class ReviewList(generics.ListCreateAPIView):
         lookup_field = 'email'
         mail = self.kwargs['email']
         print('===========================')
-        #print(mail)
+        print(mail.id)
+        #print(User.username)
         #queryset = Review.objects.filter(email__email=mail)
         queryset = Review.objects.all()
         hire = self.request.query_params.get('hire',None)
